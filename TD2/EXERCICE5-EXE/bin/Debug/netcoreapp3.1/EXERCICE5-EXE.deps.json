@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "EXERCICE5-EXE/1.0.0": {
+        "runtime": {
+          "EXERCICE5-EXE.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EXERCICE5-EXE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

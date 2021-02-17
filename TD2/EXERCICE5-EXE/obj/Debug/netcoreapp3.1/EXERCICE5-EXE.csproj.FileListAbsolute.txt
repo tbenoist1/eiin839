@@ -1,0 +1,13 @@
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.exe
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.deps.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.runtimeconfig.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.runtimeconfig.dev.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.dll
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\bin\Debug\netcoreapp3.1\EXERCICE5-EXE.pdb
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.csprojAssemblyReference.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.AssemblyInfoInputs.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.AssemblyInfo.cs
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.csproj.CoreCompileInputs.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.dll
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.pdb
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\EXERCICE5-EXE\obj\Debug\netcoreapp3.1\EXERCICE5-EXE.genruntimeconfig.cache

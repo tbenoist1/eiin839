@@ -1,0 +1,13 @@
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.exe
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.deps.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.runtimeconfig.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.runtimeconfig.dev.json
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.dll
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\bin\Debug\netcoreapp3.1\WebDynamic.pdb
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.csprojAssemblyReference.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.AssemblyInfoInputs.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.AssemblyInfo.cs
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.csproj.CoreCompileInputs.cache
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.dll
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.pdb
+C:\Users\Tbenoist\Documents\Polytech\SI4\WebServices\ForkGitHub\TD2\WebDynamic\obj\Debug\netcoreapp3.1\WebDynamic.genruntimeconfig.cache
