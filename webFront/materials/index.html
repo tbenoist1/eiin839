@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- The title of the page is written in the tab of the browser. -->
-    <title>My first Web Services UI client</title>
-</head>
-<body>
-    <h1 id="workingTest"></h1>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+		<!-- The title of the page is written in the tab of the browser. -->
+		<title>My first Web Services UI client</title>
+	</head>
+	<body>
+		<h1 id="workingTest"></h1>
+		<!-- We will use a <div> to group all items related to the API key, to ease the styling. -->
+		<div id="apiKeyBlock">
+			<!-- The "for" attribute of a label is linked to the id of an input -->
+			<label for="apiKey">Clé :</label>
+			<input name="apiKeyInput" id="apiKey">
+		</div>
+
+		<div id="step1" class="step">
+			<h2>Etape 1: Recuperer les contrats</h2>
+			<!-- onclick is an attribute that contains javascript code, triggered when the element is clicked. -->
+			<button id="retrieveContractsButton" onclick="recupererContrats();">Recuperer contrats</button>
+		</div>
+		<h2>Etape 2: Afficher liste contrats</h2>
+		<label for="input-contrats">Choisissez un contrat:</label>
+		
+		<input list="datalist-contrats" id="input-contrats" name="input-contrats" />
+
+		<datalist id="datalist-contrats"></datalist>
+		<button id="recupererStations" onclick="recupererStationsParContrat();">Recuperer stations</button>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>
