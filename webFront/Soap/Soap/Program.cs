@@ -10,7 +10,7 @@ namespace Soap
     {
         static void Main(string[] args)
         {
-            Calculator.CalculatorSoap c = new Calculator.CalculatorSoapClient();
+            MathsOperations.MathsOperationsClient c = new MathsOperations.MathsOperationsClient();
             Console.WriteLine(c.Add(14, 72));
             Console.ReadLine();
         }
