@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="OpenRouteServiceItinary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="features" nillable="true" type="tns:ArrayOfFeatureI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpenRouteServiceItinary" nillable="true" type="tns:OpenRouteServiceItinary" />
+  <xs:complexType name="ArrayOfFeatureI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FeatureI" nillable="true" type="tns:FeatureI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeatureI" nillable="true" type="tns:ArrayOfFeatureI" />
+  <xs:complexType name="FeatureI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:GeometryI" />
+      <xs:element minOccurs="0" name="properties" nillable="true" type="tns:PropertyI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FeatureI" nillable="true" type="tns:FeatureI" />
+  <xs:complexType name="GeometryI">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q1:ArrayOfArrayOffloat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeometryI" nillable="true" type="tns:GeometryI" />
+  <xs:complexType name="PropertyI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="segments" nillable="true" type="tns:ArrayOfSegment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PropertyI" nillable="true" type="tns:PropertyI" />
+  <xs:complexType name="ArrayOfSegment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Segment" nillable="true" type="tns:Segment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSegment" nillable="true" type="tns:ArrayOfSegment" />
+  <xs:complexType name="Segment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" type="xs:double" />
+      <xs:element minOccurs="0" name="duration" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Segment" nillable="true" type="tns:Segment" />
+  <xs:complexType name="OpenRouteServiceItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="features" nillable="true" type="tns:ArrayOfFeature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpenRouteServiceItem" nillable="true" type="tns:OpenRouteServiceItem" />
+  <xs:complexType name="ArrayOfFeature">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feature" nillable="true" type="tns:Feature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeature" nillable="true" type="tns:ArrayOfFeature" />
+  <xs:complexType name="Feature">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:Geometry" />
+      <xs:element minOccurs="0" name="properties" nillable="true" type="tns:Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Feature" nillable="true" type="tns:Feature" />
+  <xs:complexType name="Geometry">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q2:ArrayOffloat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Geometry" nillable="true" type="tns:Geometry" />
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="county" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Property" nillable="true" type="tns:Property" />
+</xs:schema>

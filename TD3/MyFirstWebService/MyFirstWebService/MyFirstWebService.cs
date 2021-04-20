@@ -16,7 +16,10 @@ namespace MyFirstWebService
         static async Task Main()
         {
             JsonDocument contracts = await getContracts();
-            JsonDocument oneContract = await getAContract(contracts.RootElement[2].GetProperty("contract_name").ToString());
+            JsonElement a = await getAContract("toulouse");
+            String[] s = listStationsWithBikesAvailabilities(a);
+            Console.WriteLine(a.GetArrayLength());
+            // JsonDocument oneContract = await getAContract(contracts.RootElement[2].GetProperty("contract_name").ToString());
             JsonDocument news = await getNewsByContract(contracts.RootElement[2].GetProperty("number").GetInt32(), contracts.RootElement[2].GetProperty("contract_name").ToString());
             // Console.WriteLine(contracts);
             Console.WriteLine("ville de la news : "+news.RootElement.GetProperty("contractName"));
@@ -34,10 +37,11 @@ namespace MyFirstWebService
             var response = await client.GetStreamAsync("https://api.jcdecaux.com/vls/v1/stations?&apiKey=fd8a1c81d81337532f88e746a545e0721fe29ccc");
             return await JsonDocument.ParseAsync(response);
         } 
-        async static public Task <JsonDocument> getAContract(string param)
+        async static public Task <JsonElement> getAContract(string param)
         {
             var response = await client.GetStreamAsync("https://api.jcdecaux.com/vls/v1/stations?contract="+param+"&apiKey=fd8a1c81d81337532f88e746a545e0721fe29ccc");
-            return await JsonDocument.ParseAsync(response);
+            JsonDocument contract = await JsonDocument.ParseAsync(response);
+            return contract.RootElement;
 
         }
         async static public Task<JsonDocument> getNewsByContract(int number, string param)
@@ -45,6 +49,34 @@ namespace MyFirstWebService
             var response = await client.GetStreamAsync("https://api.jcdecaux.com/vls/v3/stations/"+number+"?contract="+param+"&apiKey=2dae8548640ca7455930eb98ca0508a102ac8c1a");
             return await JsonDocument.ParseAsync(response);
 
+        }
+        static public String[] listStations(JsonElement stations)
+        {
+            int numberStations = stations.GetArrayLength();
+            String[] s = new string[numberStations];
+            for (int i = 0; i < numberStations; i++)
+            {
+                s[i] = stations[i].GetProperty("name").ToString();
+                Console.WriteLine(stations[i].GetProperty("name").ToString());
+            }
+            Console.WriteLine(stations[0]);
+            return s;
+        }
+        static public String[] listStationsWithBikesAvailabilities(JsonElement stations)
+        {
+            int numberStations = stations.GetArrayLength();
+            String[] s = new string[numberStations];
+            for (int i = 0; i < numberStations; i++)
+            {
+                if (int.Parse(stations[i].GetProperty("available_bikes").ToString()) > 0)
+                {
+                    s[i] = stations[i].GetProperty("name").ToString();
+                    Console.WriteLine(stations[i].GetProperty("name").ToString());
+                    Console.WriteLine("Nombre de vélos disponibles : "+ stations[i].GetProperty("available_bikes").ToString());
+                }
+            }
+            Console.WriteLine(stations[0]);
+            return s;
         }
     }
 }

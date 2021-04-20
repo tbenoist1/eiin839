@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Services" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceSOAP_GetItinarySOAP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItinarySOAP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_GetItinarySOAP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItinarySOAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_getCoordinatesFromAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCoordinatesFromAddress" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_getCoordinatesFromAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoordinatesFromAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Sub_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sub" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Sub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Mul_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mul" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Mul_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MulResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Div_InputMessage">
+    <wsdl:part name="parameters" element="tns:Div" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSOAP_Div_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_GetItinaryREST_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItinaryREST" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_GetItinaryREST_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItinaryRESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_SubRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubRest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_SubRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_MulRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:MulRest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_MulRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MulRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_DivRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DivRest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceREST_DivRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivRestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceSOAP">
+    <wsdl:operation name="GetItinarySOAP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSOAP/GetItinarySOAP" message="tns:IServiceSOAP_GetItinarySOAP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSOAP/GetItinarySOAPResponse" message="tns:IServiceSOAP_GetItinarySOAP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoordinatesFromAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSOAP/getCoordinatesFromAddress" message="tns:IServiceSOAP_getCoordinatesFromAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSOAP/getCoordinatesFromAddressResponse" message="tns:IServiceSOAP_getCoordinatesFromAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSOAP/Sub" message="tns:IServiceSOAP_Sub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSOAP/SubResponse" message="tns:IServiceSOAP_Sub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSOAP/Mul" message="tns:IServiceSOAP_Mul_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSOAP/MulResponse" message="tns:IServiceSOAP_Mul_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSOAP/Div" message="tns:IServiceSOAP_Div_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSOAP/DivResponse" message="tns:IServiceSOAP_Div_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IServiceREST">
+    <wsdl:operation name="GetItinaryREST">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceREST/GetItinaryREST" message="tns:IServiceREST_GetItinaryREST_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceREST/GetItinaryRESTResponse" message="tns:IServiceREST_GetItinaryREST_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceREST/SubRest" message="tns:IServiceREST_SubRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceREST/SubRestResponse" message="tns:IServiceREST_SubRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MulRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceREST/MulRest" message="tns:IServiceREST_MulRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceREST/MulRestResponse" message="tns:IServiceREST_MulRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DivRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceREST/DivRest" message="tns:IServiceREST_DivRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceREST/DivRestResponse" message="tns:IServiceREST_DivRest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPEndPoint" type="tns:IServiceSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItinarySOAP">
+      <soap:operation soapAction="http://tempuri.org/IServiceSOAP/GetItinarySOAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoordinatesFromAddress">
+      <soap:operation soapAction="http://tempuri.org/IServiceSOAP/getCoordinatesFromAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap:operation soapAction="http://tempuri.org/IServiceSOAP/Sub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap:operation soapAction="http://tempuri.org/IServiceSOAP/Mul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <soap:operation soapAction="http://tempuri.org/IServiceSOAP/Div" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="SOAPEndPoint" binding="tns:SOAPEndPoint">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Server/Services/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
