@@ -1,0 +1,106 @@
+.entete{
+    font-family: 'Frenchpress';
+    color: #EDE7E3;
+    margin-left: 15%; 
+    margin-right: 15%; 
+}
+.leftSide {
+    background-color: #EDE7E3;
+    border-radius: 8px;
+    position: absolute;
+    float:left;
+    width: 16%;
+    margin-left: 15px;
+    height: 100%;
+}
+.a div{
+    position: relative;
+    font-family: 'Frenchpress';
+    height : 500px;
+    width: 100%;
+    }
+.map {
+    height: 750px;
+    border-radius: 8px;
+    margin-top: 50px;
+    align-self: center;
+    /* margin-right: 100px; */
+    margin-left: 19%;
+    margin-right: 20%;
+    position: absolute;
+    width: 60%;
+  }
+.rightSide {
+    background-color: #EDE7E3;
+    position: absolute;
+    margin-left: 81%;
+    margin-right: 15px;
+    width: 17%;
+    height: 100%;
+    border-radius: 8px;
+}
+body{
+    background-color: #16697a; 
+}
+h1 {
+    font-family: 'Frenchpress';
+}
+.duration {
+    font-family: 'Frenchpress';
+    color: #16697a;
+    font-size: 18px;
+}
+.namePoints{
+    font-family: 'Frenchpress';
+    color: #16697a;
+    font-size: 25px;
+}
+label {
+    font-size: 30px;
+    font-family: 'Frenchpress';
+}
+input[type=text] {
+    font-family: 'Frenchpress';
+    margin : 20px;
+    width: 200px;
+    font-size: 30px;
+    padding:10px;
+    border-radius:10px;
+}
+input::placeholder {
+    color: #82C0CC;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #EDE7E3;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin : 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button3 {
+    font-family: 'Frenchpress';
+    background-color: #FFA62B; 
+    color: #EDE7E3; 
+    border: 2px solid #FFA62B;
+    border-radius: 8px;
+  }
+  
+  .button3:hover {
+    background-color: #EDE7E3;
+    color: #FFA62B;
+  }
+@font-face {
+    font-family: 'Frenchpress';
+    src: url('Frenchpress.woff2') format('woff2'),
+         url('Frenchpress.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

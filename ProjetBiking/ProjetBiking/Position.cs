@@ -9,7 +9,7 @@ namespace Proxy
     public class Position
     {
         public Position() { }
-        public Position(string la, string lg) 
+        public Position(string la, string lg)
         {
             latitude = la;
             longitude = lg;

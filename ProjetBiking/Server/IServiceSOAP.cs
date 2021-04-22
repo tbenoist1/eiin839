@@ -14,37 +14,9 @@ namespace Server
     public interface IServiceSOAP
     {
         [OperationContract]
-        OpenRouteServiceItinary GetItinarySOAP(string startAddress, string endAddress, string type, string ville);
+        OpenRouteServiceItinary GetItinarySOAP(string startAddress, string endAddress, string type);
         [OperationContract]
         OpenRouteServiceItem getCoordinatesFromAddress(string address);
-        [OperationContract]
-        int Sub(int Number1, int Number2);
-        [OperationContract]
-        int Mul(int Number1, int Number2);
-        [OperationContract]
-        int Div(int Number1, int Number2);
 
     }
-
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
-
 }

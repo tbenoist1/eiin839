@@ -13,11 +13,6 @@ namespace Proxy
     public interface IServiceRESTProxy
     {
         [OperationContract]
-        [WebGet(UriTemplate = "/Sub/{Number1}/{Number2}", RequestFormat = WebMessageFormat.Json,
-        ResponseFormat = WebMessageFormat.Json
-        )]
-        int SubRest(string Number1, string Number2);
-        [OperationContract]
         [WebGet(UriTemplate = "/GetItem?name={name}&url={url}", RequestFormat = WebMessageFormat.Json,
         ResponseFormat = WebMessageFormat.Json
         )]

@@ -58,11 +58,10 @@
     <Compile Include="IServiceRESTProxy.cs" />
     <Compile Include="JCDecauxItem.cs" />
     <Compile Include="Position.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceRESTProxy.cs" />
+    <Compile Include="Cache.cs" />
     <Compile Include="Stand.cs" />
-    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

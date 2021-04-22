@@ -14,8 +14,6 @@ namespace HeavyClient
         {
             Console.WriteLine("SALUT A TOUS LES AMIS");
             SOAPReference.IServiceSOAP soap = new SOAPReference.ServiceSOAPClient();
-            int tonpere = soap.Mul(4, 5);
-            Console.WriteLine(tonpere);
             // Console.WriteLine(HttpUtility.UrlEncode("https://api.jcdecaux.com/vls/v3/stations?contract=nantes&apiKey=fd8a1c81d81337532f88e746a545e0721fe29ccc"));
             // OpenRouteServiceItem d = soap.getCoordinatesFromAddress("Chemin%20du%20Carrelot");
             // OpenRouteServiceItem a = soap.getCoordinatesFromAddress("Avenue%20Bernard%20Maris");

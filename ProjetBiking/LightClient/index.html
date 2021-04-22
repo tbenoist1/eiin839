@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <title>SOC BikingProject</title>
+  </head>
+  <body>
+  <div class="entete">
+    <h1 style="font-size: 60px; margin-bottom: 100px;">SOC Biking Project</h1>
+    <div id="Adress block">
+      <h1>Enter you itinary :</h1>
+      <label for="adress">Address Start :</label>
+      <input type="text" placeholder="Chemin du Carrelot" name="adressInput" id="address">
+      <label for="adress2">Address End :</label>
+      <input type="text" placeholder="Avenue Bernard Maris" name="adressInput2" id="address2">
+      <label for="city"> City :</label>
+      <input type="text" placeholder="City" name="cityInput" id="city">
+      <!-- <button id="retrieveStationsAndItinaries" onclick="searchAddress();">Search</button> -->
+      <button class="button button3"id="retrieveStationsAndItinaries" onclick="searchAddress();"><span>Search</span></button>
+    </div>
+  </div>
+  <div classe="a">
+    <div class="leftSide">
+      <label style="display: block; text-align: center; margin-top: 15px; color: #16697a; font-weight: bold;">Itinary</label>
+      <div id="leftSide" style="display: none;">
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-dot-circle-o fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="startedName">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa fa-blind fa-100x" style="color: #16697a; margin-left: 40px;" aria-hidden="true"></i>
+          <label class="duration" id="startedDistance">YYYYYYY</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="startedStation">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-bicycle fa-100x" style="color: #FFA62B; margin-left: 40px;" aria-hidden="true"></i>
+          <label class="duration" id="middleDistance">1520m - 20min</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="endedStation">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa fa-blind fa-100x" style="color: #16697a; margin-left: 40px;" aria-hidden="true"></i>
+          <label class="duration" id="endedDistance">1520m - 20min</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-bullseye fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="endedName">Chemin du Carrelot</label>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="map">
+
+    </div>
+    <div class="rightSide">
+      <label style="display: block; text-align: center; margin-top: 15px; color: #16697a; font-weight: bold;">Proximity Stations (Started Point)</label>
+      <div id="rightSideStarted" style="display: none;">
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="startedStation1">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 20px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="startedStation2">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 20px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="startedStation3">Chemin du Carrelot</label>
+        </div>
+      </div>
+      <label style="display: block; text-align: center; margin-top: 15px; color: #16697a; font-weight: bold;">Proximity Stations (Ended Point)</label>
+      <div id="rightSideEnded" style="display: none;">
+        <div style="font-size: 35px; margin-top: 50px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="endedStation1">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 20px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="endedStation2">Chemin du Carrelot</label>
+        </div>
+        <div style="font-size: 35px; margin-top: 20px;">
+          <i class="fa fa-map-marker fa-100x" style="color: #489FB5; margin-right: 10px; margin-left: 25px;" aria-hidden="true"></i>
+          <label class="namePoints" id="endedStation3">Chemin du Carrelot</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <script type="text/javascript">
+    function searchAddress() {
+        let address = encodeURI(document.getElementById("address").value)
+        let address2 = encodeURI(document.getElementById("address2").value)
+        let city = encodeURI(document.getElementById("city").value)
+        console.log(address);
+        console.log(address2);
+        console.log(city);
+        var url = "http://localhost:8733/Design_Time_Addresses/Server/Services/rest/GetItinary/"+address+"/"+address2
+
+        var requestType = "GET";
+        var caller = new XMLHttpRequest();
+        caller.open(requestType, url, true);
+        caller.setRequestHeader ("Accept", "application/json");
+        caller.onload=manageResult;
+        caller.send();
+    }
+    function manageResult(){
+      // drawLine(,'green');
+      var response = JSON.parse(this.responseText);
+      console.log(response);
+      console.log(response[0].stations);
+      drawLine(response[0],"#16697a");
+      drawLine(response[1],"#FFA62B");
+      drawLine(response[2],"#16697a");
+      prepareLeftSide(response);
+    }
+    function prepareLeftSide(response){
+      // put distances / durations
+      var startedDistance = document.getElementById("startedDistance");
+          startedDistance.innerHTML = response[0].itinary.features[0].properties.segments[0].distance+"m / "+ Math.round(response[0].itinary.features[0].properties.segments[0].duration/60)+" minutes";
+      var middleDistance = document.getElementById("middleDistance");
+          middleDistance.innerHTML = response[1].itinary.features[0].properties.segments[0].distance+"m / "+ Math.round(response[1].itinary.features[0].properties.segments[0].duration/60)+" minutes";
+      var endedDistance = document.getElementById("endedDistance");
+          endedDistance.innerHTML = response[2].itinary.features[0].properties.segments[0].distance+"m / "+ Math.round(response[2].itinary.features[0].properties.segments[0].duration/60)+" minutes";
+    
+      // put leftside names
+      var startedName = document.getElementById("startedName");
+          startedName.innerHTML = document.getElementById("address").value
+      var endedName = document.getElementById("startedStation");
+          endedName.innerHTML = response[0].stations[0].name
+      var endedName = document.getElementById("endedStation");
+          endedName.innerHTML = response[1].stations[0].name
+      var endedName = document.getElementById("endedName");
+          endedName.innerHTML = document.getElementById("address2").value
+
+      // put rightside stations 
+      var startedStation1 = document.getElementById("startedStation1");
+          startedStation1.innerHTML = response[0].stations[1].name
+      var startedStation2 = document.getElementById("startedStation2");
+          startedStation2.innerHTML = response[0].stations[2].name
+      var startedStation3 = document.getElementById("startedStation3");
+          startedStation3.innerHTML = response[0].stations[3].name
+
+      var endedStation1 = document.getElementById("endedStation1");
+          endedStation1.innerHTML = response[1].stations[1].name;
+      var endedStation2 = document.getElementById("endedStation2");
+          endedStation2.innerHTML = response[1].stations[2].name
+      var endedStation3 = document.getElementById("endedStation3");
+          endedStation3.innerHTML = response[1].stations[3].name
+      
+      document.getElementById("leftSide").style.display = "contents"
+      document.getElementById("rightSideStarted").style.display = "contents"
+      document.getElementById("rightSideEnded").style.display = "contents"
+      }
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([1.462036545748826, 43.60487801573529]),
+          zoom: 11
+        })
+      });
+      function drawLine(route, color){
+        var coords = route.itinary.features[0].geometry.coordinates;
+        var lineString = new ol.geom.LineString(coords);
+        lineString.transform('EPSG:4326', 'EPSG:3857');
+
+        var feature = new ol.Feature({
+          geometry: lineString,
+          name: 'Line'
+        });
+        var lineStyle = new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: color,
+            width: 10
+          })
+        })
+        var source = new ol.source.Vector({
+        features: [feature]
+        });
+
+        var vector = new ol.layer.Vector({
+            source: source,
+            style: [lineStyle]
+        });
+
+        map.addLayer(vector);
+        console.log("C FINI");
+      }
+    </script>
+  </body>
+</html>

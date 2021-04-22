@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Server
 {
+    // Cet item regroupe toute les informations d'un item d'OpenRouteService
+
     [DataContract]
     public class OpenRouteServiceItem
     {

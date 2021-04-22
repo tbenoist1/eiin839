@@ -12,14 +12,9 @@ namespace Server
     public interface IServiceREST
     {
         [OperationContract]
-        [WebGet(UriTemplate = "/GetItinary/{startAddress}/{endAddress}/{city}", RequestFormat = WebMessageFormat.Json,
+        [WebGet(UriTemplate = "/GetItinary/{startAddress}/{endAddress}", RequestFormat = WebMessageFormat.Json,
         ResponseFormat = WebMessageFormat.Json
         )]
-        List<OpenRouteServiceItinary> GetItinaryREST(string startAddress, string endAddress, string city);
-        [OperationContract]
-        [WebGet(UriTemplate = "/Sub/{Number1}/{Number2}", RequestFormat = WebMessageFormat.Json,
-        ResponseFormat = WebMessageFormat.Json
-        )]
-        int SubRest(string Number1, string Number2);
+        List<ProjetBikingItem> GetItinaryREST(string startAddress, string endAddress);
     }
 }
